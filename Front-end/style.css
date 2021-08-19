@@ -1,0 +1,159 @@
+body{
+    overflow-x: hidden;
+    margin: 0;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    color:black;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px 2px white;
+
+}
+
+h2{
+    font-size: 35px;
+    margin-top: 0%;
+}
+
+h3{
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    padding-top: 1.3em;
+    text-decoration: underline;
+}
+
+.bloc_header{
+    background-color: rgb(113, 164, 177);
+}
+
+.header_navbar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header_navbar span{
+    color:black;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px 2px white;
+}
+
+.navigation_link i{
+    text-shadow: 2px 2px 2px white;
+    color: black;
+    font-size: 30px;
+}
+
+.navigation_link i:hover{
+    cursor: pointer;
+    font-size: 35px;
+    transition: ease 0.5s;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+.presentation{
+    margin-bottom: -1.9em;
+    text-align: center;
+    font-family: 'Style Script', cursive;;
+    background-color: rgb(111, 194, 214);
+}
+
+.presentation p{
+    margin-top: -0.9em;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.products{
+    margin-top: 0;
+    text-align: center;
+    background-color: rgb(163, 211, 223);
+}
+
+.teddies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.teddy_1, .teddy_2, .teddy_3, .teddy_4, .teddy_5{
+    border: 1px solid black;
+    border-radius: 25px 25px;
+    height: 15rem;
+    width: 15rem;
+    margin-bottom: 3rem;
+}
+
+.bloc_footer{
+    height: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(113, 164, 177);
+}
+
+.bloc_footer a{
+    font-family: 'Lobster', cursive;
+    color: black;
+    font-size: 17px;
+}
+
+.contact:hover{
+    cursor: pointer;
+    font-size: 20px;
+    transition: ease 0.5s;
+    text-shadow: 2px 2px 2px gray;
+    text-decoration: underline;
+    transition: ease 0.5s;
+}
+
+.condition:hover{
+    cursor: pointer;
+    font-size: 20px;
+    transition: ease 0.5s;
+    text-shadow: 2px 2px 2px gray;
+    text-decoration: underline;
+    transition: ease 0.5s;  
+}
+
+.policy:hover{
+    cursor: pointer;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px gray;
+    text-decoration: underline;
+    transition: ease 0.5s;
+}
+
+/* .bloc_1 a:hover{
+    cursor: pointer;
+    font-size: 19px;
+    transition: ease 0.5s;
+}
+
+.bloc_2 a:hover{
+    cursor: pointer;
+    font-size: 19px;
+    transition: ease 0.5s;
+}
+
+.bloc_3 a:hover{
+    cursor: pointer;
+    font-size: 19px;
+    transition: ease 0.5s;
+} */
