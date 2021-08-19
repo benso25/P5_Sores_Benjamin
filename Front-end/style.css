@@ -118,7 +118,7 @@ h3{
     cursor: pointer;
     font-size: 20px;
     transition: ease 0.5s;
-    text-shadow: 2px 2px 2px gray;
+    text-shadow: 1px 1px 1px white;
     text-decoration: underline;
     transition: ease 0.5s;
 }
@@ -127,7 +127,7 @@ h3{
     cursor: pointer;
     font-size: 20px;
     transition: ease 0.5s;
-    text-shadow: 2px 2px 2px gray;
+    text-shadow: 1px 1px 1px white;
     text-decoration: underline;
     transition: ease 0.5s;  
 }
@@ -135,7 +135,7 @@ h3{
 .policy:hover{
     cursor: pointer;
     font-size: 20px;
-    text-shadow: 2px 2px 2px gray;
+    text-shadow: 1px 1px 1px white;
     text-decoration: underline;
     transition: ease 0.5s;
 }
