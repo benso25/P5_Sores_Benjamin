@@ -1,28 +1,3 @@
-// declaration des constantes pour les images 
-
-// const img1 = document.getElementById('img1');
-// const img2 = document.getElementById('img2');
-// const img3 = document.getElementById('img3');
-// const img4 = document.getElementById('img4');
-// const img5 = document.getElementById('img5');
-
-// declaration des constantes pour les noms
-
-// const name = document.getElementById('name1', 'name2', 'name3', 'name4', 'name5');
-// const name2 = document.getElementById('name2');
-// const name3 = document.getElementById('name3');
-// const name4 = document.getElementById('name4');
-// const name5 = document.getElementById('name5');
-
-// declaration des constantes pour les prix
-
-// const price1 = document.getElementById('price1');
-// const price2 = document.getElementById('price2');
-// const price3 = document.getElementById('price3');
-// const price4 = document.getElementById('price4');
-// const price5 = document.getElementById('price5');
-
-
 // Appel des données depuis l'API
 
 fetch ('http://localhost:3000/api/teddies')
