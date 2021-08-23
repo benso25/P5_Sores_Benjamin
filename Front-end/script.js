@@ -23,13 +23,15 @@ const price4 = document.getElementById('price4');
 const price5 = document.getElementById('price5');
 
 
-// Appel des images depuis l'API
+// Appel des données depuis l'API
 
 fetch ('http://localhost:3000/api/teddies')
     .then(res => {
         if(res.ok){
             res.json().then(data => {
                 img1.src = data[0].imageUrl
+                name1.innerHTML = data[0].name
+                price1.innerHTML = data[0].price  
             })
         } else{
             console.log("ERREUR");
@@ -44,6 +46,8 @@ fetch ('http://localhost:3000/api/teddies')
     if(res.ok){
         res.json().then(data => {
             img2.src = data[1].imageUrl
+            name2.innerHTML = data[1].name
+            price2.innerHTML = data[1].price  
         })
     } else{
         console.log("ERREUR");
@@ -58,6 +62,8 @@ fetch ('http://localhost:3000/api/teddies')
     if(res.ok){
         res.json().then(data => {
             img3.src = data[2].imageUrl
+            name3.innerHTML = data[2].name
+            price3.innerHTML = data[2].price  
         })
     } else{
         console.log("ERREUR");
@@ -72,6 +78,8 @@ fetch ('http://localhost:3000/api/teddies')
     if(res.ok){
         res.json().then(data => {
             img4.src = data[3].imageUrl
+            name4.innerHTML = data[3].name
+            price4.innerHTML = data[3].price  
         })
     } else{
         console.log("ERREUR");
@@ -85,74 +93,8 @@ fetch ('http://localhost:3000/api/teddies')
     if(res.ok){
         res.json().then(data => {
             img5.src = data[4].imageUrl
-        })
-    } else{
-        console.log("ERREUR");
-        document.getElementById('error5').innerHTML = "Erreur"
-    }
-
-})
-
-
-// Appel des noms depuis l'API
-
-fetch ('http://localhost:3000/api/teddies')
-.then(res => {
-    if(res.ok){
-        res.json().then(data => {
-            name1.innerHTML = data[0].name
-        })
-    } else{
-        console.log("ERREUR");
-        document.getElementById('error1').innerHTML = "Erreur"
-    }
-
-})
-
-fetch ('http://localhost:3000/api/teddies')
-.then(res => {
-    if(res.ok){
-        res.json().then(data => {
-            name2.innerHTML = data[1].name
-        })
-    } else{
-        console.log("ERREUR");
-        document.getElementById('error2').innerHTML = "Erreur"
-    }
-
-})
-
-fetch ('http://localhost:3000/api/teddies')
-.then(res => {
-    if(res.ok){
-        res.json().then(data => {
-            name3.innerHTML = data[2].name
-        })
-    } else{
-        console.log("ERREUR");
-        document.getElementById('error3').innerHTML = "Erreur"
-    }
-
-})
-
-fetch ('http://localhost:3000/api/teddies')
-.then(res => {
-    if(res.ok){
-        res.json().then(data => {
-            name4.innerHTML = data[3].name
-        })
-    } else{
-        console.log("ERREUR");
-        document.getElementById('error4').innerHTML = "Erreur"
-    }
-
-})
-
-fetch ('http://localhost:3000/api/teddies')
-.then(res => {
-    if(res.ok){
-        res.json().then(data => {
             name5.innerHTML = data[4].name
+            price5.innerHTML = data[4].price  
         })
     } else{
         console.log("ERREUR");
@@ -161,72 +103,7 @@ fetch ('http://localhost:3000/api/teddies')
 
 })
 
-//appel des prix depuis l'API
 
-fetch ('http://localhost:3000/api/teddies')
-.then(res => {
-    if(res.ok){
-        res.json().then(data => {
-            price1.innerHTML = data[0].price
-        })
-    } else{
-        console.log("ERREUR");
-        document.getElementById('error1').innerHTML = "Erreur"
-    }
-
-})
-
-fetch ('http://localhost:3000/api/teddies')
-.then(res => {
-    if(res.ok){
-        res.json().then(data => {
-            price2.innerHTML = data[1].price
-        })
-    } else{
-        console.log("ERREUR");
-        document.getElementById('error2').innerHTML = "Erreur"
-    }
-
-})
-
-fetch ('http://localhost:3000/api/teddies')
-.then(res => {
-    if(res.ok){
-        res.json().then(data => {
-            price3.innerHTML = data[2].price
-        })
-    } else{
-        console.log("ERREUR");
-        document.getElementById('error3').innerHTML = "Erreur"
-    }
-
-})
-
-fetch ('http://localhost:3000/api/teddies')
-.then(res => {
-    if(res.ok){
-        res.json().then(data => {
-            price4.innerHTML = data[3].price
-        })
-    } else{
-        console.log("ERREUR");
-        document.getElementById('error4').innerHTML = "Erreur"
-    }
-
-})
-
-fetch ('http://localhost:3000/api/teddies')
-.then(res => {
-    if(res.ok){
-        res.json().then(data => {
-            price5.innerHTML = data[4].price
-        })
-    } else{
-        console.log("ERREUR");
-        document.getElementById('error5').innerHTML = "Erreur"
-    }
-
-})
 
 
 
