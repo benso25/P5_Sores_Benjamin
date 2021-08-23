@@ -29,8 +29,9 @@ h3{
     text-decoration: underline;
 }
 
-#error1, #error2, #error3, #error4, #error5{
-    font-size: 40px;
+#error{
+    width: 15rem;
+    font-size: 30px;
     font-weight: 900;
     font-family:'Lobster', cursive;
     color: red;
@@ -101,12 +102,20 @@ h3{
 }
 
 .teddy_1, .teddy_2, .teddy_3, .teddy_4, .teddy_5{
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 25px 25px;
     height: 15rem;
     width: 15rem;
     margin-bottom: 3rem;
     background-color: rgb(139, 122, 85);
+    box-shadow: 2px 2px 2px black;
+}
+
+.teddy_1:hover, .teddy_2:hover, .teddy_3:hover, .teddy_4:hover, .teddy_5:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+    box-shadow: 4px 4px 4px black;
 }
 
 #img1, #img2, #img3, #img4, #img5{
@@ -118,32 +127,34 @@ h3{
 
 #name1, #name2, #name3, #name4, #name5{
     font-size: 30px;
-    color: rgb(241, 116, 13);
-    text-shadow: 2px 2px 2px black;
-    margin-top: -2.5rem;
+    color: black;
+    text-shadow: 2px 2px 2px rgba(240, 183, 28, 0.815);
+    margin-top: -0.4rem;
     text-align: center;
     font-family: 'Lobster', cursive;
     font-weight: 200;
 }
 
-#price2, #price4, #price5{
-    font-size: 20px;
-    color: rgb(241, 116, 13);
-    text-shadow: 2px 2px 2px black;
-    margin-top: -2rem;
-    text-align: center;
-    font-family: 'Lobster', cursive;
-    font-weight: 200;
-}
 
-#price1, #price3{
+#price1, #price2, #price3, #price4, #price5{
     font-size: 20px;
-    color: rgb(241, 116, 13);
-    text-shadow: 2px 2px 2px black;
+    color: black;
+    text-shadow: 2px 2px 2px rgba(240, 183, 28, 0.815);
     margin-top: -0.1rem;
     text-align: center;
     font-family: 'Lobster', cursive;
     font-weight: 200;
+}
+
+.euros{
+    font-size: 20px;
+    color: black;
+    text-shadow: 2px 2px 2px rgba(240, 183, 28, 0.815);
+    margin-top: -1.55rem;
+    margin-left: 2.8rem;
+    font-family: 'Lobster', cursive;
+    font-weight: 200;
+
 }
 
 .bloc_footer{
