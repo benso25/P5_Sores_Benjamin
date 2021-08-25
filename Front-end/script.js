@@ -2,6 +2,7 @@
 
 fetch ('http://localhost:3000/api/teddies')
     .then(res => {
+        console.log(res);
         if(res.ok){
             res.json().then(data => {
 
@@ -9,7 +10,7 @@ fetch ('http://localhost:3000/api/teddies')
 
                 img1.src = data[0].imageUrl
                 name1.innerHTML = data[0].name
-                price1.innerHTML = data[0].price.toFixed(2)/100
+                price1.innerHTML = data[0].price.toFixed(2)/100 
                 
                 // deuxieme produit
 
@@ -37,7 +38,11 @@ fetch ('http://localhost:3000/api/teddies')
             })
         } else{
             console.log("ERREUR");
-            document.getElementById('error').innerHTML = "Désolé, une erreur est survenue durant le chargement de la page"
+            let erreurs = document.getElementsByClassName('error');
+            for(let i = 0; i< erreurs.length; i++){
+                erreurs[i].innerHTML = "Désolé une erreur est survenue";
+            }
+            
         }
 
      })
