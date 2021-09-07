@@ -3,7 +3,7 @@ let divTeddies = document.getElementsByClassName("teddies")[0];
 
 
 
-fetch ('http://localhost:3000/api/eddies')
+fetch ('http://localhost:3000/api/teddies')
     .then(res => {
         console.log(res);
         if(res.ok){
