@@ -2,7 +2,8 @@
 let divTeddies = document.getElementsByClassName("teddies")[0];
 
 
-fetch ('http://localhost:3000/api/teddies')
+
+fetch ('http://localhost:3000/api/eddies')
     .then(res => {
         console.log(res);
         if(res.ok){
@@ -11,6 +12,7 @@ fetch ('http://localhost:3000/api/teddies')
 
                 data.forEach(element => {
                     console.log(element);
+
                     //creation du lien 
                     let lien = document.createElement('a');
                     lien.setAttribute('href', "./pages/product.html?id="+element._id);
@@ -50,21 +52,36 @@ fetch ('http://localhost:3000/api/teddies')
                     lien.appendChild(nom);
                     lien.appendChild(prix);
                     divTeddies.appendChild(lien);
+
+                    
                     
                 });
             })
 
         } else{
-            console.log("ERREUR");
+            // console.log("ERREUR");
             let erreurs = document.getElementsByClassName('error');
             for(let i = 0; i< erreurs.length; i++){
-                erreurs[i].innerHTML = "Désolé une erreur est survenue";
+                erreurs[i].innerHTML = "Désolé nous rencontrons un problème lors du chargement de la page. <br>Veuillez réessayer plus tard.<br> Si le problème persiste, n'hésitez pas à nous contacter ";
             }
             
         }
 
-     })
- 
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
