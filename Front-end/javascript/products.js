@@ -22,14 +22,14 @@ fetch(`http://localhost:3000/api/teddies/`+productId)
                 productImg.style.marginBottom = "1rem";
                 productImg.style.marginTop = "1rem";
                 productImg.style.height =  "15rem";
-                productImg.style.width = "13rem";
+                productImg.style.width = "18rem";
                 productImg.style.borderRadius = "25px 25px";
                 productImg.style.objectFit = "cover";
 
                 //creation fieldset 
                 let fieldset = document.createElement('fieldset');
                 fieldset.style.width =  "13rem";
-                fieldset.style.height = "10rem";
+                fieldset.style.height = "13rem";
                 fieldset.style.paddingTop = "0.5rem";
                 fieldset.style.border =  "1px solid black";
                 fieldset.style.backgroundColor = "rgb(215, 217, 247)";
@@ -71,39 +71,31 @@ fetch(`http://localhost:3000/api/teddies/`+productId)
                 option0.setAttribute('value',"");
                 option0.innerHTML = "selectionnez une option";
 
-                    //creation option1
-                    let option1 = document.createElement('option');
-                    option1.setAttribute('value',"");
-                    option1.innerHTML = produit.colors[0];
-                    //creation option2
-                    let option2 = document.createElement('option');
-                    option2.setAttribute('value',"");
-                    option2.innerHTML = produit.colors[1];
-                    //creation option3
-                    let option3 = document.createElement('option');
-                    option3.setAttribute('value',"");
-                    option3.innerHTML = produit.colors[2];
-                    //creation option4
-                    let option4 = document.createElement('option');
-                    option4.setAttribute('value',"");
-                    option4.innerHTML = produit.colors[3];
+
+                    blocProduit.appendChild(productImg);
+                    blocProduit.appendChild(fieldset);
+                    fieldset.appendChild(productName);
+                    fieldset.appendChild(productPrice);
+                    fieldset.appendChild(form);
+                    form.appendChild(label);
+                    form.appendChild(select);
+                    select.appendChild(option0);
+
+                    for(let i=0; i<produit.colors.length;i++){
+                        let option1 = document.createElement('option');
+                        option1.setAttribute('value',"");
+                        option1.innerHTML = produit.colors[i];
+
+                        select.appendChild(option1);
+                     }
 
                     //creation bouton achat
+                    
+
+                    
 
 
 
-                blocProduit.appendChild(productImg);
-                blocProduit.appendChild(fieldset);
-                fieldset.appendChild(productName);
-                fieldset.appendChild(productPrice);
-                fieldset.appendChild(form);
-                form.appendChild(label);
-                form.appendChild(select);
-                select.appendChild(option0);
-                select.appendChild(option1);
-                select.appendChild(option2);
-                select.appendChild(option3);
-                select.appendChild(option4);
                 
 
 
