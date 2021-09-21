@@ -60,6 +60,7 @@ fetch(`http://localhost:3000/api/teddies/`+productId)
                 //creation du <select>
                 let select = document.createElement('select');
                 select.setAttribute('name', 'options');
+                select.setAttribute('id', 'options');
                 select.style.borderRadius = "15px 15px";
                 select.style.border = "1px solid black";
 
@@ -80,17 +81,114 @@ fetch(`http://localhost:3000/api/teddies/`+productId)
                     form.appendChild(label);
                     form.appendChild(select);
                     select.appendChild(option0);
+                    
 
                     for(let i=0; i<produit.colors.length;i++){
                         let option1 = document.createElement('option');
-                        option1.setAttribute('value',"");
+                        option1.setAttribute('value', produit.colors[i]);
                         option1.innerHTML = produit.colors[i];
 
                         select.appendChild(option1);
                      }
 
                     //creation bouton achat
-                    
+                    let btnPanier = document.createElement ('button');
+                    btnPanier.setAttribute('type', 'submit');
+                    btnPanier.setAttribute('id','btn_panier');
+                    btnPanier.innerHTML = "Ajouter au panier";
+                    //style bouton achat
+                    btnPanier.style.fontFamily = "Lobster', cursive";
+                    btnPanier.style.fontWeight = "bold";
+                    btnPanier.style.fontSize = "1rem";
+                    btnPanier.style.marginTop = "2rem";
+                    btnPanier.style.marginBottom = "0.5rem";
+                    btnPanier.style.width = "10rem";
+                    btnPanier.style.padding = "0.8rem";
+                    btnPanier.style.backgroundColor = "white";
+                    btnPanier.style.color = "black";
+                    btnPanier.style.borderRadius = "15px 15px";
+                    btnPanier.style.boxShadow = "1px 1px 1px black";
+
+                    //creation lien retour
+                    let lienContinuer = document.createElement ('a');
+                    lienContinuer.setAttribute('href',"../index.html");
+                    lienContinuer.innerHTML = "Continuer vos achats";
+                    //style lien retour
+                    lienContinuer.style.textDecoration = 'none';
+                    lienContinuer.style.color = 'black';
+
+                    //creation lien panier
+                    let lienPanier = document.createElement('a');
+                    lienPanier.setAttribute('href', "../pages/card.html");
+                    lienPanier.innerHTML = "Voir mon panier";
+                    //style lien panier
+                    lienPanier.style.textDecoration = 'none';
+                    lienPanier.style.marginTop = "0.5rem";
+                    lienPanier.style.color = 'black';
+
+
+                    fieldset.appendChild(btnPanier);
+                    fieldset.appendChild(lienContinuer);
+                    fieldset.appendChild(lienPanier);
+
+
+
+                //*****************Gestion du Panier */
+                //récupération des données selectionnées par l'utilisateur
+
+                //selection de l'id du formulaire
+                const idForm = document.querySelector("#options");
+                console.log(idForm);
+
+
+                //selection du bouton Ajouter au panier
+                const btnAjouter = document.querySelector('#btn_panier');
+
+
+                //Ecouter le bouton et envoyer le panier
+                btnAjouter.addEventListener('click', (event)=>{
+                event.preventDefault(); //empêche la réactualisation de la page au clic
+
+                
+                //mettre l'option choisie dans une variable
+                const choix = idForm.value;
+
+                //récupération des valeurs du formulaire
+                let optionProduit = {
+                    imageProduit : produit.imageUrl,
+                    nomProduit : produit.name,
+                    idProduit : productId,
+                    couleurProduit : choix,
+                    prixProduit : produit.price.toFixed(2)/100,
+                
+                                }
+
+                console.log(optionProduit);
+                });
+                
+
+
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                     
 
