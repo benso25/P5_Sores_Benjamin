@@ -43,6 +43,11 @@ fetch(`http://localhost:3000/api/teddies/`+productId)
                 //injection du nom et du style
                 productName.innerHTML = "<span style='font-size: 30px;  color: black; text-shadow: 2px 2px 2px white; margin-top: 1.4rem; text-align: center; font-weight: 200;'> " + produit.name + "</span>";
 
+                //creation de la <div> description
+                let productDescription = document.createElement('div');
+                //injection du texte et du style
+                productDescription.innerHTML = "<span style='font-size: 13px;  color: black; text-shadow: 2px 2px 2px white; margin-top: 1.4rem; text-align: center;'> " + produit.description + "</span>";
+
                 //creation de la <div> prix
                 let productPrice = document.createElement('div');
                 //injection du prix et du style
@@ -76,6 +81,7 @@ fetch(`http://localhost:3000/api/teddies/`+productId)
                     blocProduit.appendChild(productImg);
                     blocProduit.appendChild(fieldset);
                     fieldset.appendChild(productName);
+                    fieldset.appendChild(productDescription);
                     fieldset.appendChild(productPrice);
                     fieldset.appendChild(form);
                     form.appendChild(label);
@@ -145,7 +151,8 @@ fetch(`http://localhost:3000/api/teddies/`+productId)
                 const btnAjouter = document.querySelector('#btn_panier');
 
 
-                //Ecouter le bouton et envoyer le panier
+                //-------------------------------------Ecouter le bouton et envoyer le panier
+
                 btnAjouter.addEventListener('click', (event)=>{
                 event.preventDefault(); //empêche la réactualisation de la page au clic
 
@@ -157,15 +164,60 @@ fetch(`http://localhost:3000/api/teddies/`+productId)
                 let optionProduit = {
                     imageProduit : produit.imageUrl,
                     nomProduit : produit.name,
+                    descriptionProduit : produit.description,
                     idProduit : productId,
                     couleurProduit : choix,
                     prixProduit : produit.price.toFixed(2)/100,
-                
-                                }
+                }
 
                 console.log(optionProduit);
+
+
+                //-------------------------------Le Local Storage-----------------------------------------
+                //------Stocker la récupération des données dans le Local storage--
+
+                //Declaration de la variable "produitEnregistrer" qui contient les "keys" et les "values" présentes dans le local storage :
+
+                let produitEnregistrer = JSON.parse(localStorage.getItem("product"));
+
+                //       (--JSON.parse convertit les données au format JSON dans le local storage en objet JavaScript--)
+
+
+                //S'il y a déja des produits enregistrés dans le local storage :
+
+                if(produitEnregistrer){
+                    //----------ajout dans le tableau de l'objet avec les values choisies par l'utilisateur
+                    produitEnregistrer.push(optionProduit);
+
+                    //-----------la transformation en format JSON et envoi de la key "product" du local storage 
+                    localStorage.setItem("product", JSON.stringify(produitEnregistrer));
+
+                }
+                //S'il n'y a pas de produits enregistrés dans le local storage:
+
+                else{
+
+                    //Création d'un tableau vide pour ajouter les values choisies
+                    produitEnregistrer = [];
+
+                     //-----------ajout dans le tableau de l'objet avec les values choisies par l'utilisateur
+                    produitEnregistrer.push(optionProduit);
+
+                    //-----------la transformation en format JSON et envoi de la key "product" du local storage 
+                    localStorage.setItem("product", JSON.stringify(produitEnregistrer));
+
+                }
+
+
+
+
+
                 });
+
                 
+
+
+
 
 
                 
