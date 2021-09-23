@@ -21,15 +21,15 @@ fetch(`http://localhost:3000/api/teddies/`+productId)
                 //style de l'image
                 productImg.style.marginBottom = "1rem";
                 productImg.style.marginTop = "1rem";
-                productImg.style.height =  "15rem";
+                productImg.style.height =  "17rem";
                 productImg.style.width = "18rem";
-                productImg.style.borderRadius = "25px 25px";
+                productImg.style.borderRadius = "50px 50px";
                 productImg.style.objectFit = "cover";
 
                 //creation fieldset 
                 let fieldset = document.createElement('fieldset');
-                fieldset.style.width =  "13rem";
-                fieldset.style.height = "13rem";
+                fieldset.style.width =  "18rem";
+                fieldset.style.height = "17rem";
                 fieldset.style.paddingTop = "0.5rem";
                 fieldset.style.border =  "1px solid black";
                 fieldset.style.backgroundColor = "rgb(215, 217, 247)";
@@ -106,8 +106,10 @@ fetch(`http://localhost:3000/api/teddies/`+productId)
                     btnPanier.style.fontFamily = "Lobster', cursive";
                     btnPanier.style.fontWeight = "bold";
                     btnPanier.style.fontSize = "1rem";
-                    btnPanier.style.marginTop = "2rem";
-                    btnPanier.style.marginBottom = "0.5rem";
+                    btnPanier.style.marginTop = "1rem";
+                    btnPanier.style.marginBottom = "1rem";
+                    btnPanier.style.marginLeft = "4rem";
+                    btnPanier.style.marginRight = "4rem";
                     btnPanier.style.width = "10rem";
                     btnPanier.style.padding = "0.8rem";
                     btnPanier.style.backgroundColor = "white";
@@ -120,16 +122,16 @@ fetch(`http://localhost:3000/api/teddies/`+productId)
                     lienContinuer.setAttribute('href',"../index.html");
                     lienContinuer.innerHTML = "Continuer vos achats";
                     //style lien retour
-                    lienContinuer.style.textDecoration = 'none';
+                    lienContinuer.style.textDecoration = 'underline';
                     lienContinuer.style.color = 'black';
+                    lienContinuer.style.marginRight = "1rem";
 
                     //creation lien panier
                     let lienPanier = document.createElement('a');
                     lienPanier.setAttribute('href', "../pages/card.html");
                     lienPanier.innerHTML = "Voir mon panier";
                     //style lien panier
-                    lienPanier.style.textDecoration = 'none';
-                    lienPanier.style.marginTop = "0.5rem";
+                    lienPanier.style.textDecoration = 'underline';
                     lienPanier.style.color = 'black';
 
 

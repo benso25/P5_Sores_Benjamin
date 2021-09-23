@@ -219,7 +219,7 @@ a:hover{
     font-family: 'Lobster', cursive;
     border: 1px solid black;
     border-radius: 25px 25px;
-    height: 90%;
+    height: 100%;
     width: 35rem;
     background-color: #8dc1f5;
     box-shadow: 2px 2px 2px black;
@@ -233,6 +233,14 @@ a:hover{
     width: 100%;
     height: 100%;
     
+}
+
+.choix_teddies a:hover{
+    cursor: pointer;
+    font-size: 20px;
+    transition: ease 0.5s;
+    text-shadow: 1px 1px 1px white;
+    transition: ease 0.5s;
 }
 
 
